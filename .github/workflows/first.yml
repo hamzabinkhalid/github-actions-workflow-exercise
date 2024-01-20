@@ -8,22 +8,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Step one
-    run: date
+      run: date
   job2:
     name: Second job
     runs-on: windows-latest
     steps:
     - name: Print date
-    run: echo %date%
+      run: echo %date%
   job3:
     name: Third job
     runs-on: macos-latest
+    steps:
     - name: Print date
-    eun: date
+      run: date
   job4:
     name: Fourth job
     runs-on: ubuntu-latest
     steps:
     - name: Print date
-    run: date
+      run: date
     needs: [job1, job2, job3]
